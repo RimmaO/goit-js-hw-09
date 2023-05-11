@@ -57,7 +57,7 @@ function timerStart() {
   const time = convertMs(differenceTime);
   createMarkup(time);
 
-  if (differenceTime <= 0) {
+  if (differenceTime <= 1000) {
     clearInterval(timerId);
     startBtnRef.removeAttribute('disabled');
     dateTimePickerRef.removeAttribute('disabled');

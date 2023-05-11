@@ -16,3 +16,32 @@ img {
   display: block;
   max-width: 100%;
 }
+
+.flatpickr-input {
+  background-color: yellow;
+  height: 100px;
+  width: 500px;
+  padding: 30px;
+}
+
+button[data-start] {
+  color: black;
+  background-color: yellow;
+  height: 100px;
+  width: 100px;
+  padding: 30px;
+}
+button[data-stop] {
+  background-color: blue;
+  height: 100px;
+  width: 100px;
+  padding: 30px;
+}
+
+.timer {
+  display: flex;
+  gap: 50px;
+  color: black;
+  background-color: aqua;
+  width: 500px;
+}
