@@ -59,7 +59,6 @@ function timerStart() {
 
   if (differenceTime <= 1000) {
     clearInterval(timerId);
-    startBtnRef.removeAttribute('disabled');
     dateTimePickerRef.removeAttribute('disabled');
     Notiflix.Notify.success('Timer stopped');
   }
