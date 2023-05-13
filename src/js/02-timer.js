@@ -14,7 +14,7 @@ const minutesRef = document.querySelector('[data-minutes]');
 const secondsRef = document.querySelector('[data-seconds]');
 
 let timerId = null;
-
+startBtnRef.setAttribute('disabled', true);
 startBtnRef.addEventListener('click', onBtnStart);
 
 // Бібліотека flatpickr(selector, options) та Бібліотека повідомлень Notiflix
