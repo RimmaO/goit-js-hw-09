@@ -6,9 +6,8 @@ const formRef = document.querySelector('.form');
 const delayRef = document.querySelector('[name="delay"]');
 const stepRef = document.querySelector('[name="step"]');
 const amountRef = document.querySelector('[name="amount"]');
-const btnRef = document.querySelector('button');
 
-btnRef.addEventListener('click', onFormSubmit);
+formRef.addEventListener('submit', onFormSubmit);
 
 //function createPromise(position, delay) повинна повертати проміс, тобто return new Promise. Усередині промісу має бути setTimeout з часом delay
 // Fulfill - проміс, який виконується
@@ -37,9 +36,8 @@ function onFormSubmit(event) {
   let step = Number(stepRef.value);
   let amount = Number(amountRef.value);
 
-  for (let i = 0; i <= amount; i += 1) {
-    let promiseDelay = delay + step * i;
-    createPromise(i, promiseDelay)
+  for (let i = 1; i <= amount; i += 1) {
+    createPromise(i, delay)
       .then(({ position, delay }) => {
         Notiflix.Notify.success(
           `✅ Fulfilled promise ${position} in ${delay}ms`
@@ -50,5 +48,6 @@ function onFormSubmit(event) {
           `❌ Rejected promise ${position} in ${delay}ms`
         );
       });
+    delay += step;
   }
 }
