@@ -95,10 +95,3 @@ function convertMs(ms) {
 function addLeadingZero(value) {
   return String(value).padStart(2, '0');
 }
-
-// -----examples----
-// const date = new Date();
-// const date1 = Date.now();
-
-// console.log('Date: ', date); //Date:  Thu May 11 2023 12:43:44 GMT+0300 (Восточная Европа, летнее время)
-// console.log('Date: ', date1); //Date:  1683798237850 //ms
