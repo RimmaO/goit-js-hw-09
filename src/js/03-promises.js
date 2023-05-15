@@ -6,8 +6,9 @@ const formRef = document.querySelector('.form');
 const delayRef = document.querySelector('[name="delay"]');
 const stepRef = document.querySelector('[name="step"]');
 const amountRef = document.querySelector('[name="amount"]');
+const btnRef = document.querySelector('button');
 
-formRef.addEventListener('click', onFormSubmit);
+btnRef.addEventListener('click', onFormSubmit);
 
 //function createPromise(position, delay) повинна повертати проміс, тобто return new Promise. Усередині промісу має бути setTimeout з часом delay
 // Fulfill - проміс, який виконується
